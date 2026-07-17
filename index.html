@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoluTech</title>
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+</head>
+ <style>
+    @keyframes waveRoll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-wave-fast {
+      animation: waveRoll 4s linear infinite;
+    }
+    .animate-wave-slow {
+      animation: waveRoll 7s linear infinite;
+    }
+  </style>
+
+<body id="body" class="bg-white font-san ">
+     <!-- //top announcement -->
+        <section class="text-center w-full bg-gradient-to-r from-[#102a43] via-[#163ca4] to-[#14d8d2]">
+            <p class="text-[12px] md:text-[15px] text-white font-semibold">FREE DIAGNOSTICS & SAME-DAY REPAIR AVAILABLE</p>
+        </section>
+        <!-- //nav section -->
+        <header class=" font-sans z-20 sticky top-0">
+        <nav class="w-full p-5 bg-white text-[#1f2937] flex justify-between md:justify-between items-center gap-10" id="navBar">
+            <aside class=" flex justify-start text-2xl">
+                <h2 class="font-sans font-semibold">SoluTech</h2>
+            </aside>
+           
+            <section class="flex justify-between gap-3  ">
+                 <!-- //mobile view threedots -->
+            <aside class=" md:hidden flex justify-end text-2xl">
+                <i class="fas fa-bars " id="bars"></i>
+            </aside>
+                <ul class="md:flex md:space-x-6 cursor-pointer hidden">
+                    <div class="hidden md:flex group items-center space-x-2"><i class="fa-solid fa-house group-hover:text-[#14d8d2]
+                        group-hover:animate-pulse transition-all duration-300 ease-in-out "></i>
+                    <li><a href="#" class=" md:block md:group-hover:text-[#14d8d2] text-xl">Home</a></li>
+                    </div>
+                    <div class="hidden md:flex group items-center space-x-2"><i class="fa-solid fa-layer-group group-hover:text-[#14d8d2]
+                        group-hover:animate-ping transition-all duration-300 ease-out  "></i>
+                    <li><a href="#service" class=" md:block md:group-hover:text-[#14d8d2] text-xl">Service</a></li>
+                    </div>
+                    <div class="hidden md:flex group items-center space-x-2"><i class="fa-solid fa-circle-info group-hover:text-[#14d8d2]
+                        group-hover:rotate-360 transition-transform duration-1000 ease-in-out  "></i>
+                    <li><a href="#about" class=" md:block md:group-hover:text-[#14d8d2] text-xl">About</a></li>
+                    </div>
+                    <div class="hidden md:flex group items-center space-x-2"><i class="fa-solid fa-location-dot group-hover:text-[#14d8d2]
+                        group-hover:animate-bounce transition-all duration-300 ease-out "></i>
+                    <li><a href="#Footer" class=" md:block md:group-hover:text-[#14d8d2] text-xl">Contact</a></li>
+                    </div>
+
+                    <div class=" items-center text-xl w-4 justify-center hidden md:flex  ">
+                        <i class="sun
+                        fas fa-sun hover:text-[#14d8d2] active:animate-ping animate-pulse " ></i>
+                    </div>
+                </ul>
+                     <!-- //book button -->
+                    <aside class="w-full hidden  justify-end md:flex font-semibold">
+                    <a href="#Booking"><button class="p-3 bg-[#14d8d2] rounded-xl  cursor-pointer
+                    hover:relative hover:bottom-1 transition-all ease-in-out duration-100 active:bottom-0 ">Book Repair</button>
+                    </aside></a>
+                
+                </section>
+        </nav>
+
+         <!-- //mobile view side bar -->
+         <aside class="absolute h-0 top-20 overflow-hidden md:hidden w-full rounded-b-xl text-black shadow-xl backdrop-blur-md 
+           transition-all ease-in-out duration-500 " id="sideBar">
+    
+         <!-- Nav List -->
+         <ul class="flex cursor-pointer px-6 justify-between md:hidden">
+           <!-- Left Column -->
+           <li class="flex flex-col space-y-4">
+             <div class="flex group items-center space-x-2">
+               <i class="fa-solid fa-house group-hover:text-[#14d8d2] group-hover:animate-pulse transition-all duration-300 ease-in-out"></i>
+               <a href="#" class="block group-hover:text-[#14d8d2] text-xl">Home</a>
+             </div>
+             
+             <div class="flex group items-center space-x-2">
+               <i class="fa-solid fa-layer-group group-hover:text-[#14d8d2] group-hover:animate-ping transition-all duration-300 ease-out"></i>
+               <a href="#service" class="block group-hover:text-[#14d8d2] text-xl">Service</a>
+             </div>
+           </li>
+     
+           <!-- Right Column -->
+           <li class="flex flex-col space-y-4">
+             <div class="flex group items-center space-x-2">
+               <!-- Fixed rotate utility using Tailwind arbitrary value -->
+               <i class="fa-solid fa-circle-info group-hover:rotate-[360deg] group-hover:text-[#14d8d2] transition-transform duration-1000 ease-in-out"></i>
+               <a href="#about" class="block group-hover:text-[#14d8d2] text-xl">About</a>
+             </div>
+             
+             <div class="flex group items-center space-x-2">
+               <i class="fa-solid fa-location-dot group-hover:text-[#14d8d2] group-hover:animate-bounce transition-all duration-300 ease-out"></i>
+               <a href="#Footer" class="block group-hover:text-[#14d8d2] text-xl">Contact</a>
+             </div>
+           </li>
+         </ul>
+     
+         <!-- Bottom Actions Section -->
+         <section class="w-full flex items-center justify-between px-10 pt-6 pb-2">
+           <!-- Theme Toggle -->
+           <div class="items-center text-2xl md:hidden flex">
+             <i class="sun fas fa-sun hover:text-[#14d8d2] active:animate-ping animate-pulse"></i>
+           </div>
+      
+      <!-- Book Button with Icon -->
+      <div class="font-semibold flex items-center">
+        <a href="#Booking"><button class="flex items-center space-x-2 p-3 bg-[#14d8d2] rounded-xl cursor-pointer hover:relative hover:bottom-1 transition-all ease-in-out duration-100 active:bottom-0">
+          <i class="fa-regular fa-calendar-check text-lg"></i>
+          <span>Book Repair</span>
+        </button></a>
+      </div>
+    </section>
+         </aside>
+        </header>
+        <!-- //main -->
+        <main class="relative">
+          <!-- //top -->
+        <section class="relative w-full h-screen flex items-center justify-center overflow-hidden bg-[#0b0b0b] top-0 flex-col p-2">
+         <!-- 1. Background Image with a Dark Overlay for Text Readability -->
+        <div class="absolute inset-0 w-full h-full">
+            <img src="./src/media/image/image.webp" alt="Barbershop interior background" class="object-cover w-full h-full opacity-50">
+            <!-- Smooth luxury dark gradient overlay -->
+            <div class="absolute inset-0 md:bg-gradient-to-r bg-gradient-to-t   from-[#102a43] to-[#14d8d2]/0"></div>
+        </div>
+        <!-- //text on image -->
+        <aside class="flex gap-2 flex-col z-10  px-3  h-screen justify-center  w-full">
+            <div class=" text-center w-full flex flex-col justify-around items-center ">
+            <div class="px-3 bg-gradient-to-r from-[#102a43] via-[#163ca4] to-[#14d8d2] rounded-[6px] flex gap-3 items-center ">
+                     <i class="fa-regular text-xl fa-circle-check text-[#14d8d2] "></i>
+                <p class="font-semibold"><span class="text-[#14d8d2]">FAS</span>T.RELIABLE.GUARANTEED</p>
+            </div>
+            <div class="p-5 ">
+            <h1 class="text-3xl md:text-5xl  scale-y-[1.5] 
+              font-semibold text-[white] ">YOUR GADGETS, <span class="text-[#14d8d2]">REVIVED</span> IN NO TIME.
+            </h1>
+            </div>
+            <h4 class="text-gray-200 text-[16px] text-center md:text-xl">Expert repair for screens, batteries, water damage, and more!</h4>
+            </div>
+            <!-- //book button -->
+            <aside class="w-full justify-center flex font-semibold text-center md:pt-5">
+            <a href="#Booking"><button class="px-10 py-3 bg-[#14d8d2] rounded-xl cursor-pointer flex items-center gap-3 md:text-xl
+            hover:relative hover:bottom-1 transition-all ease-in-out duration-100 active:bottom-0 ">
+            <i class="fa-regular fa-calendar-days"></i>
+            Book Repair Now!</button></a>
+            </aside>
+        </aside>
+        <section class="flex flex-row  z-10  w-full ">
+         <ul class="text-white w-full   flex flex-col lg:flex-row justify-start gap-3 text-[14px] md:text-[16px] font-semibold ">
+                <li class="flex items-center gap-3"><i class="fa-solid fa-award"></i>Certified Experts</li>
+                <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle"></i>Quality Service</li>
+                <li class="flex items-center gap-3"><i class="fa-solid fa-shield-alt"></i>Warranty Included</li>
+                <li class="flex items-center gap-3"><i class="fa-solid fa-clock"></i>Fast Turnaround</li>
+            </ul>
+            <div class="flex items-center lg:relative md:bottom-10">
+            <article class="flex flex-col p-2 bg-white w-full rounded-xl">
+                <div class="font-semibold flex items-center gap-2">
+                    <i class="fa-regular text-xl fa-circle-check text-[#14d8d2] "></i>
+                    <h2 class="text-xl">1000+</h2>
+                </div>
+                <h4 class="text-[11px]">Gadget Repaired</h4>
+            </article>
+            </div>
+        </section>
+        </section>
+
+        <!-- //repair process section -->
+        <section class="mainSpot 
+        w-full px-3 py-5 flex gap-5 md:gap-10 flex-col scroll-mt-20" id="about">
+          <div class="flex flex-col">
+            <p class="font-semibold text-2xl">THE REPAIR PROCESS</p>
+            <div class="w-9 h-1 bg-gradient-to-r to-[#102a43] via-[#163ca4] from-[#14d8d2] rounded-[6px] flex gap-3 items-center "></div>
+          </div>
+
+          <section class="flex flex-row md:px-2 lg:px-12 xl:px-24 gap-5">
+          <aside class="flex w-full gap-16 flex-col md:flex-row ">
+            <article class="flex flex-col w-full items-center ">
+              <div class="Border 
+              p-5 md:p-8 flex items-center rounded-xl border border-gray-300"><i class="fas fa-magnifying-glass text-xl md:text-3xl"></i></div>
+              <div class="p-1 w-5 h-5 md:w-7 md:h-7 text-white flex items-center justify-center rounded-full bg-gradient-to-r to-[#102a43] via-[#163ca4] from-[#14d8d2]">1</div>
+              <div class="flex items-center flex-col">
+                <h2 class="text-xl font-semibold md:text-2xl lg:text-3xl">Diagnosis</h2>
+                <h4 class="text-center text-gray-400">We run free diagnostic to find the issue.</h4>
+              </div>
+            </article>
+             <article class="flex flex-col w-full items-center ">
+              <div class="Border 
+              p-5 md:p-8 flex items-center rounded-xl border border-gray-300"><i class="fas fa-screwdriver-wrench  text-xl md:text-3xl"></i></div>
+              <div class="p-1 w-5 h-5 md:w-7 md:h-7  text-white flex items-center justify-center rounded-full bg-gradient-to-r to-[#102a43] via-[#163ca4] from-[#14d8d2]">2</div>
+              <div class="flex items-center flex-col"> 
+                <h2 class="text-xl font-semibold md:text-2xl lg:text-3xl">Expert Repair</h2>
+                <h4 class="text-center text-gray-400">Our expert fix your device with precision and care.</h4>
+              </div>
+            </article>
+          </aside>
+          <aside class="flex gap-10 w-full md:px-2 flex-col md:flex-row justify-between">
+            <article class="flex flex-col w-full items-center  ">
+              <div class="Border 
+              p-5 md:p-8 flex items-center rounded-xl border border-gray-300"><i class="fas fa-check-circle  text-xl md:text-3xl"></i></div>
+              <div class="p-1 w-5 h-5 md:w-7 md:h-7  text-white flex items-center justify-center rounded-full bg-gradient-to-r to-[#102a43] via-[#163ca4] from-[#14d8d2]">3</div>
+              <div class="flex items-center flex-col">
+                <h2 class="text-xl font-semibold md:text-2xl lg:text-3xl">Quality Check</h2>
+                <h4 class="text-center text-gray-400">We ensure your device is working perfectly after repair.</h4>
+              </div>
+            </article>
+             <article class="flex flex-col w-full items-center ">
+              <div class="Border 
+              p-5 md:p-8 flex items-center rounded-xl border border-gray-300"><i class="fas fa-truck  text-xl md:text-3xl"></i></div>
+              <div class="p-1 w-5 h-5 md:w-7 md:h-7  text-white flex items-center justify-center rounded-full bg-gradient-to-r to-[#102a43] via-[#163ca4] from-[#14d8d2]">4</div>
+              <div class="flex items-center flex-col">
+                <h2 class="text-xl font-semibold md:text-2xl lg:text-3xl">Delivery</h2>
+                <h4 class="text-center text-gray-400">We deliver or you pickup your device back to you in perfect condition.</h4>
+              </div>
+            </article>
+          </aside>
+          </section>
+        </section>
+        
+        <!-- //service section -->
+        <section class="mainSpot 
+        w-full px-5 py-5 flex gap-5 md:gap-10 flex-col scroll-mt-20" id="service">
+          <div class="flex flex-col">
+            <p class="font-semibold text-2xl">OUR SERVICES</p>
+            <div class="w-9 h-1 bg-gradient-to-r to-[#102a43] via-[#163ca4] from-[#14d8d2] rounded-[6px] flex gap-3 items-center "></div>
+          </div>
+
+      <aside class="flex gap-3 flex-col md:flex-row w-full justify-center py-3 ">
+        <section class="flex w-full flex-row gap-3 md:flex-col">
+        <!-- //1st section -->
+        <article class="relative w-full flex h-56 md:h-72  items-end rounded-xl text-white">
+            <img src="./src/media/image/screen.webp" alt="Barbershop interior background" 
+            class="object-cover w-full h-56 rounded-2xl md:h-72">
+        <aside class="absolute p-2 flex flex-col gap-3 justify-end-safe md:h-44  w-full"> 
+          <div class="absolute inset-0  bg-gradient-to-t rounded-2xl  from-[#061c30] via-[#061c30] "></div>
+          <section class="relative  py-2">
+          <div class=" bg-[#14d8d2] rounded-full w-8 h-8  flex justify-center items-center">
+          <i class="fas fa-search text-[15px]"></i>
+          </div>
+          <h2 class="text-xl md:text-2xl font-semibold">Screen Replacement</h2>
+          <h4 class="">Cracked or broken screen?. We fix it fast.</h4>
+          </section>
+        </aside>
+        </article>
+        <!-- //2nd section -->
+        <article class="relative w-full flex h-56 md:h-72  items-end rounded-xl text-white">
+            <img src="./src/media/image/battery.webp" alt="Barbershop interior background" 
+            class="object-cover w-full h-56 rounded-2xl md:h-72">
+        <aside class="absolute p-2 flex flex-col gap-3 justify-end-safe md:h-44  w-full"> 
+          <div class="absolute inset-0  bg-gradient-to-t rounded-2xl  from-[#061c30] via-[#061c30] "></div>
+          <section class="relative  py-2">
+          <div class=" bg-[#14d8d2] rounded-full w-8 h-8  flex justify-center items-center">
+          <i class="fas fa-search text-[15px]"></i>
+          </div>
+          <h2 class="text-xl md:text-2xlfont-semibold z-10">Battery Replacement</h2>
+          <h4 class="">Dead battery? We replace it fast.</h4>
+          </section>
+        </aside>
+        </article>
+      </section>
+      <section class="flex w-full flex-row md:flex-col gap-3">
+        <!-- //3rd section -->
+        <article class="relative w-full flex h-56 md:h-72  items-end rounded-xl text-white">
+            <img src="./src/media/image/charge.webp" alt="Barbershop interior background" 
+            class="object-cover w-full h-56 rounded-2xl md:h-72">
+        <aside class="absolute p-2 flex flex-col gap-3 justify-end-safe md:h-44  w-full"> 
+          <div class="absolute inset-0  bg-gradient-to-t rounded-2xl  from-[#061c30] via-[#061c30] "></div>
+          <section class="relative  py-2">
+          <div class=" bg-[#14d8d2] rounded-full w-8 h-8  flex justify-center items-center">
+          <i class="fas fa-search text-[15px]"></i>
+          </div>
+          <h2 class="text-xl md:text-2xl font-semibold z-10">Charging Port Repair</h2>
+          <h4 class="">Damaged charging port? We fix it fast.</h4>
+          </section>
+        </aside>
+        </article>
+        <!-- //4th section -->
+        <article class="relative w-full flex h-56 md:h-72  items-end rounded-xl text-white">
+            <img src="./src/media/image/water.webp" alt="Barbershop interior background" 
+            class="object-cover w-full h-56 rounded-2xl md:h-72">
+        <aside class="absolute p-2 flex flex-col gap-3 justify-end-safe md:h-44  w-full"> 
+          <div class="absolute inset-0  bg-gradient-to-t rounded-2xl  from-[#061c30] via-[#061c30] "></div>
+          <section class="relative  py-2">
+          <div class=" bg-[#14d8d2] rounded-full w-8 h-8  flex justify-center items-center">
+          <i class="fas fa-search text-[15px]"></i>
+          </div>
+          <h2 class="text-xl md:text-2xl md:text-2xl font-semibold z-10">Water Damage Repair</h2>
+          <h4 class="">Water damaged device? We fix it fast.</h4>
+          </section>
+        </aside>
+        </article>
+      </section>
+      <section class="flex w-full  flex-row gap-3 md:flex-col ">
+        <!-- //5th section -->
+        <article class="relative w-full flex h-56 md:h-72  items-end rounded-xl text-white">
+            <img src="./src/media/image/camera.webp" alt="Barbershop interior background" 
+            class="object-cover w-full h-56 rounded-2xl md:h-72">
+        <aside class="absolute p-2 flex flex-col gap-3 justify-end-safe md:h-44  w-full"> 
+          <div class="absolute inset-0  bg-gradient-to-t rounded-2xl  from-[#061c30] via-[#061c30] "></div>
+          <section class="relative  py-2">
+          <div class=" bg-[#14d8d2] rounded-full w-8 h-8  flex justify-center items-center">
+          <i class="fas fa-search text-[15px]"></i>
+          </div>
+          <h2 class="text-xl md:text-2xl font-semibold ">Camera Replacement</h2>
+          <h4 class="">Broken camera? We fix it fast.</h4>
+          </section>
+        </aside>
+        </article>
+        <!-- //6th section -->
+        <article class="relative w-full flex h-56 md:h-72  items-end rounded-xl text-white">
+            <img src="./src/media/image/audio.webp" alt="Barbershop interior background" 
+            class="object-cover w-full h-56 rounded-2xl md:h-72">
+        <aside class="absolute p-2 flex flex-col gap-3 justify-end-safe md:h-44  w-full"> 
+          <div class="absolute inset-0  bg-gradient-to-t rounded-2xl  from-[#061c30] via-[#061c30] "></div>
+          <section class="relative  py-2">
+          <div class=" bg-[#14d8d2] rounded-full w-8 h-8  flex justify-center items-center">
+          <i class="fas fa-search text-[15px]"></i>
+          </div>
+          <h2 class="text-xl md:text-2xl font-semibold z-10">Audio Damage Repair</h2>
+          <h4 class="">Damaged audio components? We fix it fast.</h4>
+          </section>
+        </aside>
+        </article>
+      </section>
+      </aside>
+
+        </section>
+
+       <!-- //repair estimate -->
+       <section class="flex flex-col bg-[#102a43] text-white p-3 px-7 ">
+        <div class="font-semibold"> 
+          <p>Check Your Repair Cost Instantly:</p>
+        </div>
+        <aside class="flex flex-col gap-4 ">
+          <aside class="flex-col gap-4 flex md:flex-row">
+      <select name="device_type" id="device_type" class="bg-white w-full rounded-xl text-black p-3 text-[14px] border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#102a43] cursor-pointer">
+      <option value="" disabled selected>Select Device Type</option>
+      
+      <!-- APPLE (iPhone 11 through 17 Series) -->
+      <optgroup label="Apple iPhone">
+        <option value="iPhone 17 Pro Max">iPhone 17 Pro Max</option>
+        <option value="iPhone 17 Pro">iPhone 17 Pro</option>
+        <option value="iPhone 17">iPhone 17</option>
+        <option value="iPhone 16 Pro Max">iPhone 16 Pro Max</option>
+        <option value="iPhone 16 Pro">iPhone 16 Pro</option>
+        <option value="iPhone 16 Plus">iPhone 16 Plus</option>
+        <option value="iPhone 16">iPhone 16</option>
+        <option value="iPhone 15 Pro Max">iPhone 15 Pro Max</option>
+        <option value="iPhone 15 Pro">iPhone 15 Pro</option>
+        <option value="iPhone 15">iPhone 15</option>
+        <option value="iPhone 14 Pro Max">iPhone 14 Pro Max</option>
+        <option value="iPhone 14 Pro">iPhone 14 Pro</option>
+        <option value="iPhone 14">iPhone 14</option>
+        <option value="iPhone 13 Pro Max">iPhone 13 Pro Max</option>
+        <option value="iPhone 13 Pro">iPhone 13 Pro</option>
+        <option value="iPhone 13">iPhone 13</option>
+        <option value="iPhone 12 Pro Max">iPhone 12 Pro Max</option>
+        <option value="iPhone 12">iPhone 12</option>
+        <option value="iPhone 11 Pro Max">iPhone 11 Pro Max</option>
+        <option value="iPhone 11">iPhone 11</option>
+      </optgroup>
+    
+      <!-- SAMSUNG (S Series & highly popular A Series) -->
+      <optgroup label="Samsung Galaxy">
+        <option value="Galaxy S26 Ultra">Samsung Galaxy S26 Ultra</option>
+        <option value="Galaxy S26">Samsung Galaxy S26</option>
+        <option value="Galaxy S25 Ultra">Samsung Galaxy S25 Ultra</option>
+        <option value="Galaxy S25">Samsung Galaxy S25</option>
+        <option value="Galaxy S24 Ultra">Samsung Galaxy S24 Ultra</option>
+        <option value="Galaxy S24">Samsung Galaxy S24</option>
+        <option value="Galaxy S23 Ultra">Samsung Galaxy S23 Ultra</option>
+        <option value="Galaxy S23">Samsung Galaxy S23</option>
+        <option value="Galaxy S22 Ultra">Samsung Galaxy S22 Ultra</option>
+        <option value="Galaxy A55 5G">Samsung Galaxy A55 5G</option>
+        <option value="Galaxy A54 5G">Samsung Galaxy A54 5G</option>
+        <option value="Galaxy A35">Samsung Galaxy A35</option>
+        <option value="Galaxy A15">Samsung Galaxy A15</option>
+        <option value="Galaxy A14">Samsung Galaxy A14</option>
+      </optgroup>
+    
+      <!-- TECNO (Camon, Spark, Pova, Phantom) -->
+      <optgroup label="Tecno">
+        <option value="Phantom V Fold 2">Tecno Phantom V Fold 2</option>
+        <option value="Phantom V Flip 2">Tecno Phantom V Flip 2</option>
+        <option value="Camon 30 Pro">Tecno Camon 30 Pro</option>
+        <option value="Camon 30 Premier">Tecno Camon 30 Premier</option>
+        <option value="Camon 20 Pro">Tecno Camon 20 Pro</option>
+        <option value="Spark 20 Pro+">Tecno Spark 20 Pro+</option>
+        <option value="Spark 20">Tecno Spark 20</option>
+        <option value="Spark 10 Pro">Tecno Spark 10 Pro</option>
+        <option value="Pova 6 Pro">Tecno Pova 6 Pro</option>
+        <option value="Pova 5 Pro">Tecno Pova 5 Pro</option>
+        <option value="Pova 3">Tecno Pova 3</option>
+      </optgroup>
+    
+      <!-- INFINIX (Note, Hot, Zero, GT) -->
+      <optgroup label="Infinix">
+        <option value="Zero 40">Infinix Zero 40</option>
+        <option value="Note 40 Pro">Infinix Note 40 Pro</option>
+        <option value="Note 30 Pro">Infinix Note 30 Pro</option>
+        <option value="GT 20 Pro">Infinix GT 20 Pro</option>
+        <option value="Hot 50 Pro">Infinix Hot 50 Pro</option>
+        <option value="Hot 40 Pro">Infinix Hot 40 Pro</option>
+        <option value="Hot 30">Infinix Hot 30</option>
+        <option value="Hot 70">Infinix Hot 70</option>
+      </optgroup>
+    
+      <!--  / REDMI -->
+      <optgroup label=Redmi">
+        <option value="Redmi Note 13 Pro 5G">Redmi Note 13 Pro 5G</option>
+        <option value="Redmi Note 12 Pro">Redmi Note 12 Pro</option>
+        <option value="Redmi 13C">Redmi 13C</option>
+        <option value="Redmi 12">Redmi 12</option>
+      </optgroup>
+      <!-- //XIAOMI -->
+       <optgroup label="Xiaomi">
+        <option value="Xiaomi 14 Ultra">Xiaomi 14 Ultra</option>
+        <option value="Xiaomi 13 Ultra">Xiaomi 13 Ultra</option>
+      </optgroup>
+    
+      <!-- Google Pixel -->
+      <optgroup label="Google">
+        <option value="Pixel 9 Pro">Google Pixel 9 Pro</option>
+        <option value="Pixel 8 Pro">Google Pixel 8 Pro</option>
+        <option value="Pixel 7 Pro">Google Pixel 7 Pro</option>
+      </optgroup>
+       </select>
+       <select name="repair_issue" id="repair_issue" class="bg-white w-full rounded-xl text-black p-3 text-[14px] border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#102a43] cursor-pointer">
+      <option value="" disabled selected>Select Issue</option>
+      
+      <optgroup label="Screen & Glass">
+        <option value="Screen Replacement">Screen Replacement (LCD/OLED)</option>
+        <option value="Glass Only Repair">Glass-Only Repair (Digitizer)</option>
+        <option value="Back Glass Replacement">Back Glass / Rear Housing Replacement</option>
+      </optgroup>
+    
+      <optgroup label="Power & Charging">
+        <option value="Battery Replacement">Battery Replacement</option>
+        <option value="Charging Port Repair">Charging Port Repair/Replacement</option>
+        <option value="Wireless Charging Repair">Wireless Charging Coil Repair</option>
+      </optgroup>
+    
+      <optgroup label="Camera & Sound">
+        <option value="Rear Camera Repair">Rear Camera Replacement</option>
+        <option value="Front Camera/FaceID Repair">Front Camera / Face ID Sensor Repair</option>
+        <option value="Loudspeaker Repair">Loudspeaker / Muffled Audio Fix</option>
+        <option value="Microphone Repair">Microphone / Call Audio Fix</option>
+        <option value="Headphone Jack Repair">Headphone Jack Repair</option>
+      </optgroup>
+    
+      <optgroup label="Buttons & Sensors">
+        <option value="Power/Volume Button Repair">Power / Volume Button Repair</option>
+        <option value="Fingerprint/Home Button Repair">Fingerprint Sensor / Home Button Repair</option>
+      </optgroup>
+    
+      <optgroup label="Complex & Software Services">
+        <option value="Water Damage Recovery">Water & Liquid Damage Recovery</option>
+        <option value="Motherboard Micro-Soldering">Motherboard Repair (Micro-Soldering)</option>
+        <option value="Software/Bootloop Flashing">Software Troubleshooting / System Flashing</option>
+        <option value="Data Recovery">Data Recovery (Dead Phone)</option>
+        <option value="Network/Carrier Unlocking">Network / Carrier Unlocking</option>
+      </optgroup>
+       </select>
+          </aside>
+          <input type="text" name="" id="EstimatedPrice" class="border border-gray-200 p-2 rounded-xl text-gray-200" placeholder="Estimated price" readonly>
+          <section class="flex ">
+        <div class="w-full not-md:hidden "></div>
+        <button id="EstimateBtn" class="w-full cursor-pointer  relative group overflow-hidden bg-[#102a43] text-white font-semibold py-3 px-6 rounded-xl transition-all duration-100 
+        active:scale-95">
+  <!-- Wave Container (Resting at the bottom, surges up on hover) -->
+       <div class="absolute inset-0 top-[65%] group-hover:top-0 transition-all duration-500 ease-out pointer-events-none">
+         <div class="absolute inset-0 top-[40px] bg-[#163ca4] transition-colors duration-500"></div>
+         <!-- Back Wave (Darker Blue) -->
+        <div class="absolute bottom-0 left-0 w-[200%] h-[120%] opacity-70 animate-wave-slow">
+          <svg viewBox="0 0 1200 120" class="w-full h-full" fill="#163ca4" preserveAspectRatio="none">
+            <path d="M0,60 C150,100 350,20 500,60 C650,100 850,20 1000,60 C1150,100 1350,20 1500,60 L1500,120 L0,120 Z"></path>
+          </svg>
+        </div>
+        <!-- Front Wave (Bright Cyan) -->
+        <div class="absolute bottom-0 left-0 w-[200%] h-[110%] animate-wave-slow">
+          <svg viewBox="0 0 1200 120" class="w-full h-full" fill="#14d8d2" preserveAspectRatio="none">
+            <path d="M0,60 C150,30 350,90 500,60 C650,30 850,90 1000,60 C1150,30 1350,90 1500,60 L1500,120 L0,120 Z"></path>
+          </svg>
+        </div>
+        </div>
+        <!-- Button Text -->
+        <span class="relative z-10 text-white group-hover:text-black transition-colors duration-500 ">
+          Get Estimate
+        </span>
+        </button>
+        <div class="w-full not-md:hidden"></div>
+          </section>
+
+          <!-- //trust -->
+          <section class="flex ">
+            <div class="w-full not-md:hidden "></div>
+            <section class="flex w-full justify-between">
+            <aside class="flex flex-row gap-1 items-center  ">
+            <div class="w-2 h-2 bg-[#14d8d2] rounded-full"></div>
+            <p class="text-[12px]">Fast estimate</p>
+            </aside>
+             <aside class="flex flex-row gap-1 items-center  ">
+            <div class="w-2 h-2 bg-[#14d8d2] rounded-full"></div>
+            <p class="text-[12px]">Transparent pricing</p>
+            </aside>
+             <aside class="flex flex-row gap-1 items-center  ">
+            <div class="w-2 h-2 bg-[#14d8d2] rounded-full"></div>
+            <p class="text-[12px]">No hidden fees</p>
+            </aside>
+            </section>
+            <div class="w-full not-md:hidden "></div> 
+          </section>
+          </aside>
+       </section>
+
+       <!-- //Customer reviews -->
+        <section class="mainSpot 
+        p-5 flex flex-col gap-2 ">
+          <div class="flex flex-col pb-6">
+            <p class="font-semibold text-2xl">Customer Reviews</p>
+            <div class="w-9 h-1 bg-gradient-to-r to-[#102a43] via-[#163ca4] from-[#14d8d2] rounded-[6px] flex gap-3 items-center "></div>
+          </div>
+
+          <aside class="md:px-3 flex-row flex gap-1 text-black">
+          <article class="flex flex-col p-2 bg-gray-100 rounded-xl gap-1">
+            <div class="flex gap-1">
+              <i class="fas fa-star text-[#14d8d2]"></i>
+              <i class="fas fa-star text-[#14d8d2]"></i>
+              <i class="fas fa-star text-[#14d8d2]"></i>
+              <i class="fas fa-star text-[#14d8d2]"></i>
+              <i class="fas fa-star text-[#14d8d2]"></i>
+            </div>
+            <div><p>Excellent service and super fast!, my phone looks brand new.</p></div>
+          </article>
+           <article class="flex flex-col p-2 bg-gray-100 rounded-xl gap-1">
+            <div class="flex gap-1">
+              <i class="fas fa-star text-[#14d8d2]"></i>
+              <i class="fas fa-star text-[#14d8d2]"></i>
+              <i class="fas fa-star text-[#14d8d2]"></i>
+              <i class="fas fa-star text-[#14d8d2]"></i>
+              <!-- <i class="fas fa-star text-[#14d8d2]"></i> -->
+            </div>
+            <div><p>Excellent service and super fast!, my phone looks brand new.</p></div>
+          </article>
+          <article class="flex flex-col p-2 bg-gray-100 rounded-xl gap-1 not-md:hidden">
+            <div class="flex gap-1">
+              <i class="fas fa-star text-[#14d8d2]"></i>
+              <i class="fas fa-star text-[#14d8d2]"></i>
+              <i class="fas fa-star text-[#14d8d2]"></i>
+              <i class="fas fa-star text-[#14d8d2]"></i>
+              <!-- <i class="fas fa-star text-[#14d8d2]"></i> -->
+            </div>
+            <div><p>Excellent service and super fast!, my phone looks brand new.</p></div>
+          </article>
+          </aside>
+
+          <aside class="md:px-3 flex-row flex gap-1 text-black">
+          <article class="flex flex-col p-2 bg-gray-100 rounded-xl gap-1">
+            <div class="flex gap-1">
+              <i class="fas fa-star text-[#14d8d2]"></i>
+              <i class="fas fa-star text-[#14d8d2]"></i>
+              <i class="fas fa-star text-[#14d8d2]"></i>
+              <i class="fas fa-star text-[#14d8d2]"></i>
+              <i class="fas fa-star text-[#14d8d2]"></i>
+            </div>
+            <div><p>Excellent service and super fast!, my phone looks brand new.</p></div>
+          </article>
+           <article class="flex flex-col p-2 bg-gray-100 rounded-xl gap-1">
+            <div class="flex gap-1">
+              <i class="fas fa-star text-[#14d8d2]"></i>
+              <i class="fas fa-star text-[#14d8d2]"></i>
+              <i class="fas fa-star text-[#14d8d2]"></i>
+              <i class="fas fa-star text-[#14d8d2]"></i>
+              <!-- <i class="fas fa-star text-[#14d8d2]"></i> -->
+            </div>
+            <div><p>Excellent service and super fast!, my phone looks brand new.</p></div>
+          </article>
+          <article class="flex flex-col p-2 bg-gray-100 rounded-xl gap-1 not-md:hidden">
+            <div class="flex gap-1">
+              <i class="fas fa-star text-[#14d8d2]"></i>
+              <i class="fas fa-star text-[#14d8d2]"></i>
+              <i class="fas fa-star text-[#14d8d2]"></i>
+              <i class="fas fa-star text-[#14d8d2]"></i>
+              <!-- <i class="fas fa-star text-[#14d8d2]"></i> -->
+            </div>
+            <div><p>Excellent service and super fast!, my phone looks brand new.</p></div>
+          </article>
+          </aside>
+        </section>
+
+        <!-- //Booking section -->
+        <section class="flex flex-col justify-around w-full items-center p-10 scroll-mt-20" id="Booking">      
+            <div class="relative ">
+             <a href="#" class="text-4xl md:text-6xl font-bold font-serif text-[#14d8d2] tracking-wide leading-tight flex
+             items-center justify-center">SoluTech </a>
+            </div>
+            <form action="" class="w-full p-3 flex flex-col items-center gap-3 md:px-32 lg:px-64 xl:px-72">
+                <p class="text-[#14d8d2] text-2xl">Booking</p>
+                <input type="text" class="w-full p-3 border border-gray-400 rounded-xl text-gray-400" placeholder="Full name" 
+                 required autocomplete="on" id="FullName">
+                <aside class="sm:flex-row flex flex-col w-full md:gap-3 gap-2">
+                <input type="text"  class="w-full p-3 border border-gray-400 rounded-xl text-gray-400"
+                  required autocomplete="on" placeholder="Date" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" id="Date">
+                 <input type="text"  class="w-full p-3 border border-gray-400 rounded-xl text-gray-400"
+                  required autocomplete="on" placeholder="Time" onfocus="(this.type='time')" onblur="if(!this.value) this.type='text'" id="Time">
+                </aside>
+                  <aside class="flex-col gap-3 flex md:flex-row w-full">
+                  <select name="device_type" id="device_type" class=" w-full border border-gray-400 rounded-xl text-gray-400 p-3 text-[14px] cursor-pointer" 
+                   required id="DeviceType">
+                       <option value="" disabled selected>Select Device Type</option>
+                       
+                       <!-- APPLE (iPhone 11 through 17 Series) -->
+                       <optgroup label="Apple iPhone">
+                         <option value="iPhone 17 Pro Max">iPhone 17 Pro Max</option>
+                         <option value="iPhone 17 Pro">iPhone 17 Pro</option>
+                         <option value="iPhone 17">iPhone 17</option>
+                         <option value="iPhone 16 Pro Max">iPhone 16 Pro Max</option>
+                         <option value="iPhone 16 Pro">iPhone 16 Pro</option>
+                         <option value="iPhone 16 Plus">iPhone 16 Plus</option>
+                         <option value="iPhone 16">iPhone 16</option>
+                         <option value="iPhone 15 Pro Max">iPhone 15 Pro Max</option>
+                         <option value="iPhone 15 Pro">iPhone 15 Pro</option>
+                         <option value="iPhone 15">iPhone 15</option>
+                         <option value="iPhone 14 Pro Max">iPhone 14 Pro Max</option>
+                         <option value="iPhone 14 Pro">iPhone 14 Pro</option>
+                         <option value="iPhone 14">iPhone 14</option>
+                         <option value="iPhone 13 Pro Max">iPhone 13 Pro Max</option>
+                         <option value="iPhone 13 Pro">iPhone 13 Pro</option>
+                         <option value="iPhone 13">iPhone 13</option>
+                         <option value="iPhone 12 Pro Max">iPhone 12 Pro Max</option>
+                         <option value="iPhone 12">iPhone 12</option>
+                         <option value="iPhone 11 Pro Max">iPhone 11 Pro Max</option>
+                         <option value="iPhone 11">iPhone 11</option>
+                       </optgroup>
+                      
+                       <!-- SAMSUNG (S Series & highly popular A Series) -->
+                       <optgroup label="Samsung Galaxy">
+                         <option value="Samsung Galaxy S26 Ultra">Samsung Galaxy S26 Ultra</option>
+                         <option value="Samsung Galaxy S26">Samsung Galaxy S26</option>
+                         <option value="Samsung Galaxy S25 Ultra">Samsung Galaxy S25 Ultra</option>
+                         <option value="Samsung Galaxy S25">Samsung Galaxy S25</option>
+                         <option value="Samsung Galaxy S24 Ultra">Samsung Galaxy S24 Ultra</option>
+                         <option value="Samsung Galaxy S24">Samsung Galaxy S24</option>
+                         <option value="Samsung Galaxy S23 Ultra">Samsung Galaxy S23 Ultra</option>
+                         <option value="Samsung Galaxy S23">Samsung Galaxy S23</option>
+                         <option value="Samsung Galaxy S22 Ultra">Samsung Galaxy S22 Ultra</option>
+                         <option value="Samsung Galaxy A55 5G">Samsung Galaxy A55 5G</option>
+                         <option value="Samsung Galaxy A54 5G">Samsung Galaxy A54 5G</option>
+                         <option value="Samsung Galaxy A35">Samsung Galaxy A35</option>
+                         <option value="Samsung Galaxy A15">Samsung Galaxy A15</option>
+                         <option value="Samsung Galaxy A14">Samsung Galaxy A14</option>
+                       </optgroup>
+                      
+                       <!-- TECNO (Camon, Spark, Pova, Phantom) -->
+                       <optgroup label="Tecno">
+                         <option value="Tecno Phantom V Fold 2">Tecno Phantom V Fold 2</option>
+                         <option value="Tecno Phantom V Flip 2">Tecno Phantom V Flip 2</option>
+                         <option value="Tecno Camon 30 Pro">Tecno Camon 30 Pro</option>
+                         <option value="Tecno Camon 30 Premier">Tecno Camon 30 Premier</option>
+                         <option value="Tecno Camon 20 Pro">Tecno Camon 20 Pro</option>
+                         <option value="Tecno Spark 20 Pro+">Tecno Spark 20 Pro+</option>
+                         <option value="Tecno Spark 20">Tecno Spark 20</option>
+                         <option value="Tecno Spark 10 Pro">Tecno Spark 10 Pro</option>
+                         <option value="Tecno Pova 6 Pro">Tecno Pova 6 Pro</option>
+                         <option value="Tecno Pova 5 Pro">Tecno Pova 5 Pro</option>
+                         <option value="Tecno Pova 3">Tecno Pova 3</option>
+                       </optgroup>
+                      
+                       <!-- INFINIX (Note, Hot, Zero, GT) -->
+                       <optgroup label="Infinix">
+                         <option value="Infinix Zero 40">Infinix Zero 40</option>
+                         <option value="Infinix Note 40 Pro">Infinix Note 40 Pro</option>
+                         <option value="Infinix Note 30 Pro">Infinix Note 30 Pro</option>
+                         <option value="Infinix GT 20 Pro">Infinix GT 20 Pro</option>
+                         <option value="Infinix Hot 50 Pro">Infinix Hot 50 Pro</option>
+                         <option value="Infinix Hot 40 Pro">Infinix Hot 40 Pro</option>
+                         <option value="Infinix Hot 30">Infinix Hot 30</option>
+                         <option value="Infinix Hot 70">Infinix Hot 70</option>
+                       </optgroup>
+                      
+                       <!-- XIAOMI / REDMI -->
+                       <optgroup label="Xiaomi & Redmi">
+                         <option value="Xiaomi 14 Ultra">Xiaomi 14 Ultra</option>
+                         <option value="Xiaomi 13 Ultra">Xiaomi 13 Ultra</option>
+                         <option value="Redmi Note 13 Pro 5G">Redmi Note 13 Pro 5G</option>
+                         <option value="Redmi Note 12 Pro">Redmi Note 12 Pro</option>
+                         <option value="Redmi 13C">Redmi 13C</option>
+                         <option value="Redmi 12">Redmi 12</option>
+                       </optgroup>
+                      
+                       <!-- OTHER POPULAR BRANDS (Google Pixel, OnePlus) -->
+                       <optgroup label="Google & OnePlus">
+                         <option value="Google Pixel 9 Pro">Google Pixel 9 Pro</option>
+                         <option value="Google Pixel 8 Pro">Google Pixel 8 Pro</option>
+                         <option value="Google Pixel 7 Pro">Google Pixel 7 Pro</option>
+                         <option value="OnePlus 12">OnePlus 12</option>
+                         <option value="OnePlus 11">OnePlus 11</option>
+                         <option value="OnePlus 10 Pro">OnePlus 10 Pro</option>
+                       </optgroup>
+                  </select>
+                  <select name="repair_issue" id="repair_issue" class=" w-full border border-gray-400 rounded-xl text-gray-400 p-3 text-[14px] cursor-pointer" 
+                  required id="Service">
+                       <option value="" disabled selected>Select Issue</option>
+                       
+                       <optgroup label="Screen & Glass">
+                         <option value="Screen Replacement">Screen Replacement (LCD/OLED)</option>
+                         <option value="Glass Only Repair">Glass-Only Repair (Digitizer)</option>
+                         <option value="Back Glass Replacement">Back Glass / Rear Housing Replacement</option>
+                       </optgroup>
+                      
+                       <optgroup label="Power & Charging">
+                         <option value="Battery Replacement">Battery Replacement</option>
+                         <option value="Charging Port Repair">Charging Port Repair/Replacement</option>
+                         <option value="Wireless Charging Repair">Wireless Charging Coil Repair</option>
+                       </optgroup>
+                      
+                       <optgroup label="Camera & Sound">
+                         <option value="Rear Camera Repair">Rear Camera Replacement</option>
+                         <option value="Front Camera/FaceID Repair">Front Camera / Face ID Sensor Repair</option>
+                         <option value="Loudspeaker Repair">Loudspeaker / Muffled Audio Fix</option>
+                         <option value="Microphone Repair">Microphone / Call Audio Fix</option>
+                         <option value="Headphone Jack Repair">Headphone Jack Repair</option>
+                       </optgroup>
+                      
+                       <optgroup label="Buttons & Sensors">
+                         <option value="Power/Volume Button Repair">Power / Volume Button Repair</option>
+                         <option value="Fingerprint/Home Button Repair">Fingerprint Sensor / Home Button Repair</option>
+                       </optgroup>
+                      
+                       <optgroup label="Complex & Software Services">
+                         <option value="Water Damage Recovery">Water & Liquid Damage Recovery</option>
+                         <option value="Motherboard Micro-Soldering">Motherboard Repair (Micro-Soldering)</option>
+                         <option value="Software/Bootloop Flashing">Software Troubleshooting / System Flashing</option>
+                         <option value="Data Recovery">Data Recovery (Dead Phone)</option>
+                         <option value="Network/Carrier Unlocking">Network / Carrier Unlocking</option>
+                       </optgroup>
+                  </select>
+                </aside>
+                 <textarea  rows="4" placeholder="Other issues, specific details about the damage, or extra information..." class="w-full rounded-xl
+                   p-3 text-[14px] border border-gray-400 text-gray-400 mb-4 resize-none" 
+                   id="booking_details"></textarea>
+                <button type="submit" class="submit
+                bg-[#102a43] hover:bg-[#14d8d2] shadow-[#123b61] active:shadow-2xs active:scale-95 text-white font-sans font-semibold tracking-wider uppercase cursor-pointer 
+                text-xs md:text-sm px-2 py-4 w-52 rounded-sm shadow-2xl hover:animate-bounce animate-pulse transition-colors duration-300 ease-in-out active:bg-[#102a43] active:duration-75"
+                id="Submit">
+                    Submit
+                </button>
+            </form>
+        </section>
+
+         <!-- //footer section -->
+       <footer class="flex flex-col gap-3 md:flex-row w-full p-10 bg-[#102a43] justify-between text-gray-200 scroll-mt-20" id="Footer">
+        <section class="w-full flex flex-col gap-5">
+            <div>
+                <p class="font-semibold text-2xl">Contact info</p>
+            </div>
+            <aside class="flex flex-col gap-3">
+            <div class="flex  items-center gap-2">
+            <i class="fas fa-phone"></i> 
+            <h4>+234 913 472 9702</h4>
+            </div>
+            <div class="flex  items-center gap-2">
+            <i class="fas fa-envelope"></i> 
+            <h4>ayomide@gmail.com</h4>
+            </div>
+            <div class="flex  items-center gap-2">
+            <i class="fas fa-location-dot"></i> 
+            <h4>123 Glory Street, Ikeja, Lagos, Nigeria</h4>
+            </div>
+            <div class="flex  items-center gap-2">
+            <i class="fas fa-clock"></i> 
+            <h4>Mon-Sat: 9:00am-6:00pm</h4>
+            </div>
+            </aside>
+        </section>
+         <section class="w-full flex flex-col gap-5">
+            <div>
+                <p class="font-semibold text-2xl">Map</p>
+            </div>
+            <aside class="flex flex-col gap-3">
+              <div class="w-full h-36 bg-white rounded-xl"></div>
+            </aside>
+        </section>
+         <section class="w-full flex flex-col gap-5 ">
+            <div>
+                <p class="font-semibold text-2xl">FOLLOW US</p>
+            </div>
+            <aside class="flex flex-row justify-between w-full pr-24 ">
+            <div class="items-center justify-center flex border w-7 h-7 border-gray-600 rounded-full">
+            <i class="fa-brands fa-facebook text-xl"></i>
+            </div>
+            <div class="items-center justify-center flex border w-7 h-7 border-gray-600 rounded-full">
+            <i class="fa-brands fa-instagram text-xl"></i> 
+            </div>
+            <div class="items-center justify-center flex border w-7 h-7 border-gray-600 rounded-full">
+            <i class="fa-brands fa-twitter text-xl"></i> 
+            </div>
+            <div class="items-center justify-center flex border w-7 h-7 border-gray-600 rounded-full">
+            <i class="fa-brands fa-linkedin text-xl "></i> 
+            </div>
+            <div class="items-center justify-center flex border w-7 h-7 border-gray-600 rounded-full">
+            <i class="fa-brands fa-discord text-xl"></i> 
+            </div>
+            </aside>
+        </section>
+       </footer>
+        
+        </main>
+        <script src="./src/js/index.js"></script>
+</body>
+</html>
