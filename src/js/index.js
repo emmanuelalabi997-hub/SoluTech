@@ -9312,8 +9312,8 @@ submitButton.addEventListener('submit', (event) => {
         border.classList.toggle('border-gray-600');
         border.classList.toggle('border-gray-300');
     });
-    navBar.classList.toggle('bg-black');
-    navBar.classList.toggle('bg-white');
+    navBar.classList.toggle('bg-[#070707]');
+    navBar.classList.toggle('bg-[#f2f2f2]');
     navBar.classList.toggle('text-white')
     });
 });
