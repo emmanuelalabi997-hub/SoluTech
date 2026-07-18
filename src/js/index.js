@@ -9300,8 +9300,8 @@ submitButton.addEventListener('submit', (event) => {
     sun.addEventListener('click', () => {
     sun.classList.toggle('fa-sun');
     sun.classList.toggle('fa-moon');
-    body.classList.toggle('bg-black');
-    body.classList.toggle('bg-white');
+    body.classList.toggle('bg-[#070707]');
+    body.classList.toggle('bg-[#f2f2f2]');
     sideBar.classList.toggle('text-black');
     sideBar.classList.toggle('text-white');
     mainSpot.forEach((spot) => {

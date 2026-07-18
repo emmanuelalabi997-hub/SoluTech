@@ -518,6 +518,15 @@
   .bg-\[\#163ca4\] {
     background-color: #163ca4;
   }
+  .bg-\[\#070707\] {
+    background-color: #070707;
+  }
+  .bg-\[\#f2f2f2\] {
+    background-color: #f2f2f2;
+  }
+  .bg-\[white\] {
+    background-color: white;
+  }
   .bg-amber-400 {
     background-color: var(--color-amber-400);
   }
